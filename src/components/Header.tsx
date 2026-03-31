@@ -1,6 +1,7 @@
 import { useBudget } from '@/context/BudgetContext';
+import { useAuth } from '@/context/AuthContext';
 import { CURRENCIES } from '@/types/budget';
-import { Moon, Sun, Wallet } from 'lucide-react';
+import { LogOut, Moon, Sun, Wallet } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Select,
@@ -12,6 +13,7 @@ import {
 
 export default function Header() {
   const { currency, setCurrency, darkMode, toggleDarkMode } = useBudget();
+  const { signOut } = useAuth();
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg">
@@ -42,6 +44,10 @@ export default function Header() {
 
           <Button variant="ghost" size="icon" onClick={toggleDarkMode} className="h-9 w-9">
             {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+          </Button>
+
+          <Button variant="ghost" size="icon" onClick={signOut} className="h-9 w-9" title="Sign out">
+            <LogOut className="h-4 w-4" />
           </Button>
         </div>
       </div>
