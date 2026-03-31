@@ -1,6 +1,7 @@
 import { useBudget } from '@/context/BudgetContext';
+import { useAuth } from '@/context/AuthContext';
 import { CURRENCIES } from '@/types/budget';
-import { Moon, Sun, Wallet } from 'lucide-react';
+import { LogOut, Moon, Sun, Wallet } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Select,
