@@ -13,6 +13,7 @@ import {
 
 export default function Header() {
   const { currency, setCurrency, darkMode, toggleDarkMode } = useBudget();
+  const { signOut } = useAuth();
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg">
