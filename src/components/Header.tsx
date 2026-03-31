@@ -45,6 +45,11 @@ export default function Header() {
           <Button variant="ghost" size="icon" onClick={toggleDarkMode} className="h-9 w-9">
             {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </Button>
+
+          <Button variant="ghost" size="icon" onClick={signOut} className="h-9 w-9" title="Sign out">
+            <LogOut className="h-4 w-4" />
+          </Button>
+          </Button>
         </div>
       </div>
     </header>
