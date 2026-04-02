@@ -1,3 +1,5 @@
-# Welcome to your Lovable project
+# Varsity Budget
 
-TODO: Document your project here
+Welcome to Varsity Budget.
+
+This project focuses on helping students manage their financial resources more efficiently.
